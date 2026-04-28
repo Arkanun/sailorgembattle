@@ -29,7 +29,11 @@ Tecnologias usadas:
 - Projeto experimental e autoral
 
 ## 📸 Preview
- 
+ <p align="center">
+<img src="https://raw.githubusercontent.com/Arkanun/sailorgembattle/refs/heads/main/Preview/imagemA.jfif" width="700">
+<br><br>
+<img src="https://raw.githubusercontent.com/Arkanun/sailorgembattle/refs/heads/main/Preview/imagemB.jfif" width="700">
+</p>
 
 ## 💡 Objetivo
 Explorar o uso de IA no desenvolvimento indie, combinando programação, arte generativa e paixão por games e anime.
