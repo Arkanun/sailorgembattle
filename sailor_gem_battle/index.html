@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="game">
+<canvas id="bg-canvas"></canvas>
+<canvas id="fx-canvas"></canvas>
+
+<div class="char-left">
+<img src="char1.png" class="char-glow-p1" style="height:100%; max-height:460px;">
+</div>
+
+<div class="char-right">
+<img src="char2.png" class="char-glow-p2" style="height:100%; max-height:460px;">
+</div>
+
+<div class="hud-top">
+  <div class="player-tag p1-tag">&#9889; 1P — SAILOR MERCURY</div>
+  <div class="score-box p1-score" id="score1">000,000</div>
+  
+  <div class="score-box p2-score" id="score2">000,000</div>
+  <div class="player-tag p2-tag">SAILOR JUPITER <span class="ai-badge">CPU</span></div>
+</div>
+
+<div class="boards-area">
+
+    <div class="board board-p1" id="board1"></div>
+
+    <div class="center-game">
+        <div class="vs-badge">VS</div>
+        <div class="round-txt">ROUND 1</div>
+
+        <div class="timer-box">
+            <div class="timer-label">TIME</div>
+            <div class="timer-val" id="timer">01:30</div>
+        </div>
+    </div>
+
+    <div class="board board-p2" id="board2">
+        <div class="ai-thinking-box" id="aiThinking">⚡ THINKING...</div>
+    </div>
+
+</div>
+
+<div class="bottom-panel">
+    <div class="skill-box skill-box-p1">
+        <div class="skill-icon skill-icon-p1">&#128167;</div>
+        <div class="skill-info">
+            <div class="skill-name skill-name-p1">AQUA MIST</div>
+            <div class="skill-desc">Apaga 1 coluna aleatória!</div>
+            <div style="display:flex;gap:7px;align-items:center;">
+                <button class="skill-btn skill-btn-p1" id="skillBtn1" onclick="useSkill(1)" disabled>USAR</button>
+                <div style="flex:1;"><div class="charge-bar"><div class="charge-fill charge-p1" id="charge1" style="width:0%"></div></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="center-info">
+        <div class="line-row">
+            <div class="line-block"><div class="line-label">LINES P1</div><div class="line-val" id="lines1">0</div></div>
+            <div style="font-size:18px;color:#ffd740;">&#11088;</div>
+            <div class="line-block"><div class="line-label">LINES CPU</div><div class="line-val" id="lines2">0</div></div>
+        </div>
+        <div class="diff-row">
+            <span class="diff-label">CPU:</span>
+            <button class="diff-btn active" id="diff-easy" onclick="setDiff('easy')">FÁCIL</button>
+            <button class="diff-btn" id="diff-medium" onclick="setDiff('medium')">MÉDIO</button>
+            <button class="diff-btn" id="diff-hard" onclick="setDiff('hard')">DIFÍCIL</button>
+        </div>
+    </div>
+    <div class="skill-box skill-box-p2">
+        <div class="skill-icon skill-icon-p2">&#9889;</div>
+        <div class="skill-info">
+            <div class="skill-name skill-name-p2">THUNDER SHOOT</div>
+            <div class="skill-desc">CPU usa automaticamente!</div>
+            <div style="display:flex;gap:7px;align-items:center;">
+                <div style="font-size:9px;color:#546e7a;letter-spacing:1px;">AUTO</div>
+                <div style="flex:1;"><div class="charge-bar"><div class="charge-fill charge-p2" id="charge2" style="width:0%"></div></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="credit-footer">
+        Desenvolvido por
+        <a href="https://twitter.com/sergiorbv" target="_blank">@sergiorbv</a>
+        • usando Claude.ai / ChatGPT / ComfyUI Local
+    </div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div style="text-align:center;">
+    <div style="font-size:50px;margin-bottom:4px;">&#128142;</div>
+    <h2 style="color:#4fc3f7;">SAILOR MOON GEM BATTLE</h2>
+    <p style="margin-top:2px;font-size:10px;letter-spacing:3px;color:#546e7a;">SAILOR SENSHI vs CPU</p>
+  </div>
+  <div style="background:rgba(0,0,0,.4);border:1px solid #1a3a6e;border-radius:8px;padding:12px 20px;text-align:center;font-size:12px;color:#78909c;line-height:1.9;">
+    Arraste as gemas com o mouse ou dedo<br>
+    Forme combos de 3+ para pontuar<br>
+    Combos encadeados multiplicam os pontos!
+  </div>
+  <div class="diff-row">
+    <span class="diff-label">DIFICULDADE CPU:</span>
+    <button class="diff-btn active" id="ov-easy" onclick="setDiff('easy')">FÁCIL</button>
+    <button class="diff-btn" id="ov-medium" onclick="setDiff('medium')">MÉDIO</button>
+    <button class="diff-btn" id="ov-hard" onclick="setDiff('hard')">DIFÍCIL</button>
+  </div>
+  <button class="start-btn" onclick="startGame()">&#9654; INICIAR BATALHA</button>
+</div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body></html>
