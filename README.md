@@ -40,7 +40,8 @@ Tecnologias usadas:
 </p>
 
 ## 💡 Objetivo
-Explorar o uso de IA no desenvolvimento indie, combinando programação, arte generativa e paixão por games e anime.
+Explorar o uso de IA no desenvolvimento indie, combinando programação, arte generativa e paixão por games e anime. 
+
 
 ---
 
