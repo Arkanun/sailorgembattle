@@ -4,8 +4,8 @@
   Um jogo inspirado em Candy Crush e Puyo Puyo, ambientado no universo de Sailor Moon.
 </p>
 
-## 🎮 Link pro Jogo:
-https://sailorgembattle.netlify.app/
+## 🎮 Jogar Online
+👉 [Clique aqui para jogar](https://sailorgembattle.netlify.app/)
 
 
 ## ✨ Sobre o projeto
